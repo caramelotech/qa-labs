@@ -1,10 +1,50 @@
-# Treinamento em Teste de Software
+# QA Labs
 
-Repositório usado para centralizar os conteúdos ministrados no treinamento do [Júlio Lima](https://www.juliodelima.com.br/) sobre [Testes de Software](http://tspi.juliodelima.com.br/).
+Laboratório prático da **Caramelo Tech** com foco em Qualidade de Software - conceitos, técnicas e automação de testes.
 
-## Capítulos
+## O que você vai encontrar
 
-[1.](https://github.com/felurye/treinamento-teste-de-software/blob/master/1-%20A%20mentalidade%20de%20quem%20testa%20aplica%C3%A7%C3%B5es.md) A mentalidade de quem testa aplicações
+- Anotações sobre mindset, processos e técnicas de QA
+- Exemplos práticos de abordagens de teste
+- Exercícios para fixar os conceitos
+- Mini projetos para aplicar o aprendizado
 
-[2.](https://github.com/felurye/treinamento-teste-de-software/blob/master/2-%20Testes%20em%20diferentes%20contextos.md) Testes em diferentes contextos
+## Estrutura do repositório
 
+```
+/notes        → Anotações e estudos
+/examples     → Exemplos práticos
+/exercicios   → Exercícios propostos
+/projetos     → Projetos práticos
+```
+
+### Navegação Rápida
+
+| Seção          | Descrição                    | Link                                               |
+| -------------- | ---------------------------- | -------------------------------------------------- |
+| **Anotações**  | Tópicos teóricos organizados | [notes/](notes/README.md)                          |
+| **Exemplos**   | Exemplos práticos de QA      | [examples/](examples/README.md)                    |
+| **Exercícios** | Exercícios para praticar     | [exercicios/](exercicios/README.md)                |
+| **Projetos**   | Projetos para construir      | [projetos/](projetos/README.md)                    |
+| **Contribuir** | Como contribuir              | [.github/CONTRIBUTING.md](.github/CONTRIBUTING.md) |
+
+## Como usar
+
+1. Comece pelas anotações em `/notes`
+2. Explore os exemplos em `/examples`
+3. Resolva os exercícios em `/exercicios`
+4. Construa os projetos em `/projetos`
+
+## Sobre a Caramelo Tech
+
+A Caramelo Tech é uma iniciativa focada em aprendizado prático de tecnologia.
+
+Aqui você não apenas lê - você constrói.
+
+## Contribuição
+
+Contribuições são bem-vindas! Veja o [Guia de Contribuição](.github/CONTRIBUTING.md) para mais detalhes.
+
+## Licença
+
+MIT
