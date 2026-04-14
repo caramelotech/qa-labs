@@ -1,18 +1,18 @@
 # Exemplos
 
-Exemplos práticos de técnicas e ferramentas de QA.
+Esta pasta concentra os materiais praticos do repositorio.
+
+## Indice
+
+| Caminho | Tipo | Descricao |
+| --- | --- | --- |
+| `exercises.md` | Exercicios | Lista de desafios para praticar os conceitos das notas |
+| `projects.md` | Projetos | Propostas de mini projetos para consolidar o aprendizado |
 
 ## Como usar
 
-1. Escolha um exemplo
-2. Leia o contexto e os comentários
-3. Execute ou aplique
-4. Modifique e experimente
+1. Leia a nota relacionada em `src/content/docs/`
+2. Resolva um exercicio em `exercises.md`
+3. Evolua para um projeto em `projects.md`
 
-## Lista de exemplos
-
-| Pasta | Descrição |
-|-------|-----------|
-| (em breve) | Novos exemplos serão adicionados em breve |
-
-**[← Voltar ao README Principal](../README.md)**
+Mais detalhes estao em [../.github/CONTRIBUTING.md](../.github/CONTRIBUTING.md).

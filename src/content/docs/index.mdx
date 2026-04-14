@@ -1,0 +1,35 @@
+---
+title: QA Labs
+description: Laboratorio pratico da Caramelo Tech com foco em qualidade de software, tecnicas de teste e automacao.
+template: splash
+hero:
+  tagline: Laboratorio pratico da Caramelo Tech com foco em qualidade de software, tecnicas de teste e automacao.
+  actions:
+    - text: Comecar agora
+      link: /qa-labs/01-mentalidade-de-tester/
+      icon: right-arrow
+      variant: primary
+    - text: GitHub
+      link: https://github.com/caramelotech/qa-labs
+      icon: github
+      variant: minimal
+sidebar:
+  hidden: true
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+  <Card title="Notas" icon="open-book">
+    Conceitos explicados de forma clara e progressiva, do basico ao avancado.
+  </Card>
+  <Card title="Exemplos" icon="rocket">
+    Material pratico para observar tecnicas e abordagens de QA em contexto.
+  </Card>
+  <Card title="Exercicios" icon="pencil">
+    Desafios para consolidar o aprendizado. Disponiveis em `examples/exercises.md`.
+  </Card>
+  <Card title="Projetos" icon="star">
+    Projetos completos para aplicar tudo que foi aprendido. Disponiveis em `examples/projects.md`.
+  </Card>
+</CardGrid>

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* -------------------------------------------------------
+   Dark theme - baseado em caramelotech.github.io
+   bg:      hsl(30 15% 8%)   ->  --sl-color-black
+   surface: hsl(30 12% 12%)  ->  --sl-color-gray-6
+   accent:  hsl(40 90% 55%)  ->  --sl-color-accent
+   -------------------------------------------------------- */
+:root[data-theme='dark'] {
+  --sl-color-accent-low:  hsl(30, 40%, 14%);
+  --sl-color-accent:      hsl(40, 90%, 55%);
+  --sl-color-accent-high: hsl(40, 95%, 72%);
+  --sl-color-white:       hsl(40, 30%, 92%);
+  --sl-color-gray-1:      hsl(30, 20%, 84%);
+  --sl-color-gray-2:      hsl(30, 15%, 64%);
+  --sl-color-gray-3:      hsl(30, 12%, 42%);
+  --sl-color-gray-4:      hsl(30, 12%, 27%);
+  --sl-color-gray-5:      hsl(30, 12%, 19%);
+  --sl-color-gray-6:      hsl(30, 12%, 12%);
+  --sl-color-black:       hsl(30, 15%, 8%);
+}
+
+/* -------------------------------------------------------
+   Light theme - baseado em caramelotech.github.io (.light)
+   bg:      hsl(40 30% 96%)  ->  --sl-color-black (invertido)
+   text:    hsl(30 15% 12%)  ->  --sl-color-white (invertido)
+   accent:  hsl(40 90% 45%)
+   -------------------------------------------------------- */
+:root[data-theme='light'] {
+  --sl-color-accent-low:  hsl(40, 90%, 92%);
+  --sl-color-accent:      hsl(40, 90%, 45%);
+  --sl-color-accent-high: hsl(35, 80%, 30%);
+  --sl-color-white:       hsl(30, 15%, 12%);
+  --sl-color-gray-1:      hsl(30, 10%, 18%);
+  --sl-color-gray-2:      hsl(30, 10%, 34%);
+  --sl-color-gray-3:      hsl(30, 10%, 50%);
+  --sl-color-gray-4:      hsl(40, 15%, 73%);
+  --sl-color-gray-5:      hsl(40, 20%, 87%);
+  --sl-color-gray-6:      hsl(40, 25%, 94%);
+  --sl-color-black:       hsl(40, 30%, 98%);
+}
+
+/* Fontes */
+:root {
+  --sl-font:      'Inter', system-ui, sans-serif;
+  --sl-font-mono: 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
+}
+
+/* Space Grotesk nos titulos */
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3,
+.sl-markdown-content h4,
+.sl-markdown-content h5,
+.sl-markdown-content h6,
+.page-title,
+.site-title span {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+}

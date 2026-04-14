@@ -1,66 +1,96 @@
-# Guia de Contribuição
+# Guia de Contribuicao
 
-Obrigado por querer contribuir com o QA Labs!
+Obrigado por querer contribuir com o QA Labs.
 
 ## O que pode ser contribuido
 
-- Melhorias e correções nas anotações (`/notes`)
-- Novos exemplos práticos em `/examples`
-- Exercícios adicionais em `/exercicios`
-- Projetos práticos em `/projetos`
+- Melhorias e correcoes nas anotacoes em `src/content/docs/`
+- Novos exemplos praticos em `examples/`
+- Exercicios adicionais em `examples/exercises.md`
+- Projetos praticos em `examples/projects.md`
+- Melhorias no site Astro + Starlight
 
 ## Processo
 
-1. Crie uma branch a partir de `main` seguindo o padrão:
-   ```
+1. Crie uma branch a partir de `main` seguindo o padrao:
+
+   ```text
    feature/descricao-curta
    fix/descricao-curta
    docs/descricao-curta
    ```
 
-2. Faça commits atômicos com mensagens no padrão de Conventional Commits:
+2. Faca commits atomicos com mensagens no padrao de Conventional Commits:
+
+   ```text
+   feat: adicionar anotacoes sobre testes de api
+   fix: corrigir descricao de teste exploratorio
+   docs: melhorar exercicio de levantamento de riscos
    ```
-   feat: adicionar anotações sobre testes de API
-   fix: corrigir descrição de teste exploratório
-   docs: melhorar exercício de levantamento de riscos
-   ```
 
-   Tipos válidos: `feat`, `fix`, `docs`, `style`, `refactor`, `chore`
+3. Abra um Pull Request usando o template disponivel.
 
-3. Abra um Pull Request usando o template disponível e aguarde revisão.
+4. Apos aprovacao, o merge sera feito por um mantenedor.
 
-4. Após aprovação, o merge será feito por um mantenedor.
+## Rodando o site localmente
 
-## Padrões de conteúdo
+```bash
+npm install
+npm run dev
+```
 
-### Anotações (Markdown)
+O site fica disponivel em `http://localhost:4321`.
 
-- Escreva em português
-- Use títulos hierárquicos (`##`, `###`)
+Para validar antes de abrir o PR:
+
+```bash
+npm run build
+npm run preview
+```
+
+## Padroes de conteudo
+
+### Anotacoes em `src/content/docs/`
+
+- Escreva em portugues
+- Use titulos hierarquicos (`##`, `###`)
 - Prefira exemplos curtos e diretos
-- Inclua o "por quê", não apenas o "como"
-- Nomeie os arquivos com prefixo numérico sequencial: `03-nome-do-topico.md`
-- Atualize o índice em `notes/README.md` ao adicionar um novo tópico
+- Inclua o "por que", nao apenas o "como"
+- Nomeie os arquivos com prefixo numerico sequencial
+- Use frontmatter Starlight completo
 
-### Exemplos (`/examples`)
+Frontmatter recomendado:
 
-- Um conceito por pasta, nomeada com prefixo sequencial: `01-nome-do-exemplo/`
-- Inclua um comentário ou contexto explicando o que o exemplo demonstra
-- Use situações reais ou próximas do cotidiano de QA
+```yaml
+---
+title: "Titulo da nota"
+description: "Resumo curto explicando o foco da pagina."
+lastUpdated: 2026-01-01
+sidebar:
+  order: 4
+tags: ["qa", "tema", "iniciante"]
+---
+```
 
-### Exercícios (`/exercicios`)
+### Exemplos em `examples/`
+
+- Um conceito por pasta ou arquivo quando fizer sentido
+- Inclua um contexto explicando o que o exemplo demonstra
+- Use situacoes reais ou proximas do cotidiano de QA
+
+### Exercicios em `examples/exercises.md`
 
 - Descreva claramente o objetivo
-- Indique o nível de dificuldade (iniciante / intermediário / avançado)
-- Inclua exemplos de saída ou critérios de sucesso em formato de checklist
+- Indique o nivel de dificuldade quando necessario
+- Inclua criterios de sucesso em formato de checklist
 
-### Projetos (`/projetos`)
+### Projetos em `examples/projects.md`
 
 - Descreva o objetivo e o contexto
 - Liste os requisitos em formato de checklist
-- Inclua ao menos um exemplo de entregável esperado
-- Adicione dicas para quem está começando
+- Inclua ao menos um exemplo de entregavel esperado
+- Adicione dicas para quem esta comecando
 
-## Dúvidas?
+## Duvidas
 
 Abra uma issue com a tag `question`.

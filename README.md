@@ -1,50 +1,88 @@
 # QA Labs
 
-Laboratório prático da **Caramelo Tech** com foco em Qualidade de Software - conceitos, técnicas e automação de testes.
+> Laboratorio pratico da Caramelo Tech com foco em qualidade de software, tecnicas de teste e automacao.
 
-## O que você vai encontrar
+Bem-vindo ao **QA Labs**. Este repositorio reune notas publicadas com Astro + Starlight, exercicios e projetos para apoiar o aprendizado pratico em qualidade de software.
 
-- Anotações sobre mindset, processos e técnicas de QA
-- Exemplos práticos de abordagens de teste
-- Exercícios para fixar os conceitos
+## O que voce vai encontrar
+
+- Anotacoes sobre mindset, processos e tecnicas de QA
+- Exemplos praticos de abordagens de teste
+- Exercicios para fixar os conceitos
 - Mini projetos para aplicar o aprendizado
 
-## Estrutura do repositório
+## Estrutura do repositorio
 
+```text
+qa-labs/
+├── src/content/docs/   -> Anotacoes e estudos publicados no site
+├── examples/           -> Exemplos de codigo, exercicios e projetos praticos
+└── .github/            -> Workflows, templates e guias de contribuicao
 ```
-/notes        → Anotações e estudos
-/examples     → Exemplos práticos
-/exercicios   → Exercícios propostos
-/projetos     → Projetos práticos
-```
 
-### Navegação Rápida
+### Navegacao rapida
 
-| Seção          | Descrição                    | Link                                               |
-| -------------- | ---------------------------- | -------------------------------------------------- |
-| **Anotações**  | Tópicos teóricos organizados | [notes/](notes/README.md)                          |
-| **Exemplos**   | Exemplos práticos de QA      | [examples/](examples/README.md)                    |
-| **Exercícios** | Exercícios para praticar     | [exercicios/](exercicios/README.md)                |
-| **Projetos**   | Projetos para construir      | [projetos/](projetos/README.md)                    |
-| **Contribuir** | Como contribuir              | [.github/CONTRIBUTING.md](.github/CONTRIBUTING.md) |
+| Secao      | Descricao                    | Link                                               |
+| ---------- | ---------------------------- | -------------------------------------------------- |
+| Notas      | Topicos teoricos organizados | [src/content/docs/](src/content/docs/)             |
+| Exemplos   | Exemplos praticos de QA      | [examples/README.md](examples/README.md)           |
+| Exercicios | Exercicios para praticar     | [examples/exercises.md](examples/exercises.md)     |
+| Projetos   | Projetos para construir      | [examples/projects.md](examples/projects.md)       |
+| Contribuir | Como contribuir              | [.github/CONTRIBUTING.md](.github/CONTRIBUTING.md) |
 
 ## Como usar
 
-1. Comece pelas anotações em `/notes`
-2. Explore os exemplos em `/examples`
-3. Resolva os exercícios em `/exercicios`
-4. Construa os projetos em `/projetos`
+1. Comece pelas anotacoes em `src/content/docs/`
+2. Leia primeiro [A Mentalidade de Quem Testa Aplicacoes](src/content/docs/01-mentalidade-de-tester.md)
+3. Depois avance para [Testes em Diferentes Contextos](src/content/docs/02-testes-em-diferentes-contextos.md)
+4. Resolva os desafios em `examples/exercises.md`
+5. Construa os projetos em `examples/projects.md`
+
+## Rodando localmente
+
+```bash
+npm install
+npm run dev
+```
+
+O servidor local fica em `http://localhost:4321`.
+
+Outros comandos uteis:
+
+```bash
+npm run build
+npm run preview
+```
+
+Versao publicada:
+
+`https://caramelotech.github.io/qa-labs`
+
+## Adicionando notas
+
+Novas anotacoes devem ser criadas em `src/content/docs/`. Use nomes claros e prefixos numericos quando fizer parte da trilha.
+
+Exemplo de frontmatter padrao Starlight:
+
+```md
+---
+title: "Titulo da nota"
+description: "Resumo curto explicando o foco da pagina."
+lastUpdated: 2026-01-01
+sidebar:
+  order: 4
+tags: ["qa", "tema", "iniciante"]
+---
+```
 
 ## Sobre a Caramelo Tech
 
-A Caramelo Tech é uma iniciativa focada em aprendizado prático de tecnologia.
+A Caramelo Tech e uma iniciativa focada em aprendizado pratico de tecnologia. Aqui voce nao apenas le: voce constroi.
 
-Aqui você não apenas lê - você constrói.
+## Contribuicao
 
-## Contribuição
+Contribuicoes sao bem-vindas. Veja o [Guia de Contribuicao](.github/CONTRIBUTING.md) para mais detalhes.
 
-Contribuições são bem-vindas! Veja o [Guia de Contribuição](.github/CONTRIBUTING.md) para mais detalhes.
-
-## Licença
+## Licenca
 
 MIT
