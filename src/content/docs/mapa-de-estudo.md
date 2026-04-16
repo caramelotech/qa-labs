@@ -9,7 +9,7 @@ tags: ["qa", "roadmap"]
 
 Este guia organiza os principais conceitos e práticas modernas de qualidade de software, alinhado com o cenário atual de desenvolvimento (CI/CD, microsserviços, automação e observabilidade).
 
-# 🧩 1. Fundamentos de Qualidade de Software
+## 🧩 1. Fundamentos de Qualidade de Software
 
 - Conceito de qualidade de software (valor + confiabilidade)
 - Objetivo do teste de software
@@ -23,7 +23,7 @@ Este guia organiza os principais conceitos e práticas modernas de qualidade de 
 - Testes de Caixa Preta vs Caixa Branca
 - Testes funcionais vs não-funcionais
 
-# 🏗️ 2. Estratégia de Testes
+## 🏗️ 2. Estratégia de Testes
 
 - Estratégia de testes (Test Strategy)
 - Plano de testes (quando necessário)
@@ -32,22 +32,22 @@ Este guia organiza os principais conceitos e práticas modernas de qualidade de 
 - Testes baseados em risco (Risk-Based Testing)
 - Testes exploratórios
 
-# ⚙️ 3. Testes Automatizados
+## ⚙️ 3. Testes Automatizados
 
-## Backend
+### Backend
 
 - Testes unitários
 - Mocks, Stubs e Fakes
 - Testes de integração (APIs, banco de dados)
 - Testes de contrato (consumer-driven)
 
-## Frontend / UI
+### Frontend / UI
 
 - Testes End-to-End (E2E)
 - Boas práticas de automação
 - Evitando testes frágeis (flaky tests)
 
-# 🔁 4. CI/CD e Qualidade Contínua
+## 🔁 4. CI/CD e Qualidade Contínua
 
 - Integração Contínua (CI)
 - Entrega Contínua (CD)
@@ -58,13 +58,13 @@ Este guia organiza os principais conceitos e práticas modernas de qualidade de 
   - Shift Left
   - Shift Right
 
-# 🧪 5. BDD, TDD e ATDD
+## 🧪 5. BDD, TDD e ATDD
 
 - Behavior Driven Development (BDD)
 - Test Driven Development (TDD)
 - Acceptance Test Driven Development (ATDD)
 
-## Práticas
+### Práticas
 
 - Escrita de cenários com Gherkin:
   - GIVEN / WHEN / THEN
@@ -72,7 +72,7 @@ Este guia organiza os principais conceitos e práticas modernas de qualidade de 
 - Features e cenários
 - Exemplos e fluxos alternativos
 
-# 🌐 6. Testes em Arquiteturas Modernas
+## 🌐 6. Testes em Arquiteturas Modernas
 
 - Microsserviços
 - Sistemas distribuídos
@@ -83,7 +83,7 @@ Este guia organiza os principais conceitos e práticas modernas de qualidade de 
   - Retry
   - Circuit breaker
 
-# 📊 7. Observabilidade e Testes em Produção
+## 📊 7. Observabilidade e Testes em Produção
 
 - Logs estruturados
 - Métricas e monitoramento
@@ -93,14 +93,14 @@ Este guia organiza os principais conceitos e práticas modernas de qualidade de 
   - Canary releases
   - Shadow traffic
 
-# 🚀 8. Performance e Confiabilidade
+## 🚀 8. Performance e Confiabilidade
 
 - Testes de carga (Load Testing)
 - Stress Testing
 - Testes de desempenho
 - Latência e throughput
 
-# 🔍 9. Automação de Testes UI
+## 🔍 9. Automação de Testes UI
 
 - Conceitos de automação com Selenium
 - Ferramentas modernas:
@@ -109,7 +109,7 @@ Este guia organiza os principais conceitos e práticas modernas de qualidade de 
 - Page Object Pattern (com moderação)
 - Boas práticas para estabilidade dos testes
 
-# 🐞 10. Gestão de Bugs e Qualidade
+## 🐞 10. Gestão de Bugs e Qualidade
 
 - Ciclo de vida de bugs
 - Severidade vs Prioridade
@@ -118,7 +118,7 @@ Este guia organiza os principais conceitos e práticas modernas de qualidade de 
   - Defect leakage
   - Cobertura de testes (com cautela)
 
-# ⚡ 11. Testes em Metodologias Ágeis
+## ⚡ 11. Testes em Metodologias Ágeis
 
 - Testes em Scrum
 - Eventos ágeis:
@@ -130,16 +130,16 @@ Este guia organiza os principais conceitos e práticas modernas de qualidade de 
 - Colaboração entre times
 - Papel do Quality Engineer
 
-# 🧰 12. Ferramentas e Ecossistema
+## 🧰 12. Ferramentas e Ecossistema
 
-## Testes
+### Testes
 
 - Frameworks de teste (ex: JUnit)
 - Ferramentas BDD (ex: Cucumber)
 - Testes de API
 - Ferramentas E2E (Playwright, Cypress)
 
-## DevOps
+### DevOps
 
 - Pipelines (GitHub Actions, GitLab CI)
 - Docker para ambientes de teste
