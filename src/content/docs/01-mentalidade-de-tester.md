@@ -19,8 +19,8 @@ O principal objetivo de quem testa e a **antecipacao de problemas** que poderiam
 
 ### Tres caracteristicas que predominam na mentalidade de quem testa
 
-| 1 | 2 | 3 |
-| --- | --- | --- |
+| 1                                                                   | 2                                                                              | 3                                                              |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------------ | -------------------------------------------------------------- |
 | Preciso validar que o produto atenda as expectativas do meu cliente | Tenho que antecipar comportamentos inesperados e alertar os riscos ao meu time | E minha missao disseminar essa mentalidade dentre meus colegas |
 
 ## A comunicacao sob a perspectiva de testes desde o inicio

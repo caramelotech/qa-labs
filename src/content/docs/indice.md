@@ -11,26 +11,26 @@ Bem-vindo a secao de anotacoes do QA Labs. Os topicos estao organizados sequenci
 
 ## Fundamentos de QA
 
-| # | Topico | Descricao |
-| --- | --- | --- |
-| 01 | [A mentalidade de quem testa aplicacoes](./01-mentalidade-de-tester/) | Mindset, comunicacao e abordagens de teste |
-| 02 | [Testes em diferentes contextos](./02-testes-em-diferentes-contextos/) | Modelos tradicional e agil de desenvolvimento |
+| #   | Topico                                                                 | Descricao                                     |
+| --- | ---------------------------------------------------------------------- | --------------------------------------------- |
+| 01  | [A mentalidade de quem testa aplicacoes](./01-mentalidade-de-tester/)  | Mindset, comunicacao e abordagens de teste    |
+| 02  | [Testes em diferentes contextos](./02-testes-em-diferentes-contextos/) | Modelos tradicional e agil de desenvolvimento |
 
 ## Tecnicas de Teste
 
-| # | Topico | Descricao |
-| --- | --- | --- |
-| 03 | Testes funcionais e nao-funcionais | Em breve |
-| 04 | Testes manuais vs. automatizados | Em breve |
-| 05 | Testes exploratorios | Em breve |
+| #   | Topico                             | Descricao |
+| --- | ---------------------------------- | --------- |
+| 03  | Testes funcionais e nao-funcionais | Em breve  |
+| 04  | Testes manuais vs. automatizados   | Em breve  |
+| 05  | Testes exploratorios               | Em breve  |
 
 ## Automacao
 
-| # | Topico | Descricao |
-| --- | --- | --- |
-| 06 | Introducao a automacao de testes | Em breve |
-| 07 | Piramide de testes | Em breve |
-| 08 | Testes de API | Em breve |
+| #   | Topico                           | Descricao |
+| --- | -------------------------------- | --------- |
+| 06  | Introducao a automacao de testes | Em breve  |
+| 07  | Piramide de testes               | Em breve  |
+| 08  | Testes de API                    | Em breve  |
 
 ## Trilha de Aprendizado
 

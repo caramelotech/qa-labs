@@ -21,13 +21,13 @@ Para que uma aplicacao seja desenvolvida, ela passa por um processo composto por
 
 ### Processo de testes no modelo tradicional
 
-| Fase | Atividades | Artefatos |
-| --- | --- | --- |
-| **Documentacao** | Revisar documentacao | Plano de teste e caso de teste |
-| **Codificacao** | Revisar codigo fonte | Testes de unidade e testes de integracao |
-| **Testes** | Executar casos de teste, automatizar testes, gerir inconsistencias e retestar | Log de testes, reporte de inconsistencias e scripts automatizados |
-| **Homologacao** | Auxiliar usuarios nos testes de aceitacao | Reporte de inconsistencias |
-| **Entrega** | Versionar o testware, emitir relatorios e monitorar a aplicacao em producao | Reporte de inconsistencias e relatorio de resumo dos testes |
+| Fase             | Atividades                                                                    | Artefatos                                                         |
+| ---------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| **Documentacao** | Revisar documentacao                                                          | Plano de teste e caso de teste                                    |
+| **Codificacao**  | Revisar codigo fonte                                                          | Testes de unidade e testes de integracao                          |
+| **Testes**       | Executar casos de teste, automatizar testes, gerir inconsistencias e retestar | Log de testes, reporte de inconsistencias e scripts automatizados |
+| **Homologacao**  | Auxiliar usuarios nos testes de aceitacao                                     | Reporte de inconsistencias                                        |
+| **Entrega**      | Versionar o testware, emitir relatorios e monitorar a aplicacao em producao   | Reporte de inconsistencias e relatorio de resumo dos testes       |
 
 ## Modelo agil
 
@@ -40,13 +40,13 @@ Para que uma aplicacao seja desenvolvida, ela passa por um processo composto por
 
 ### Processo de testes no modelo agil
 
-| Fase | Atividades | Artefatos |
-| --- | --- | --- |
-| **Desenho** | Discutir viabilidade, revisar artefatos e levantar riscos | Mapas mentais |
-| **Refinamento** | Definir criterios de aceitacao, revisar artefatos, estimar esforco em teste, levantar riscos e atualizar plano de testes | Mapas mentais |
-| **Planejamento** | Estimar esforco em testes | Tarefas de teste |
-| **Codificacao e Testes** | Executar tarefas de teste, testes exploratorios, automatizar testes e apoiar desenvolvedores | Reporte de inconsistencias, scripts automatizados e testes de unidade e integracao |
-| **Entrega** | Colaborar para a qualidade do processo de entrega e monitorar a producao | Reporte de inconsistencias |
+| Fase                     | Atividades                                                                                                               | Artefatos                                                                          |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
+| **Desenho**              | Discutir viabilidade, revisar artefatos e levantar riscos                                                                | Mapas mentais                                                                      |
+| **Refinamento**          | Definir criterios de aceitacao, revisar artefatos, estimar esforco em teste, levantar riscos e atualizar plano de testes | Mapas mentais                                                                      |
+| **Planejamento**         | Estimar esforco em testes                                                                                                | Tarefas de teste                                                                   |
+| **Codificacao e Testes** | Executar tarefas de teste, testes exploratorios, automatizar testes e apoiar desenvolvedores                             | Reporte de inconsistencias, scripts automatizados e testes de unidade e integracao |
+| **Entrega**              | Colaborar para a qualidade do processo de entrega e monitorar a producao                                                 | Reporte de inconsistencias                                                         |
 
 ## Resumo
 
