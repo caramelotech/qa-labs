@@ -21,3 +21,9 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
+
+# Claude Code
+.claude/
+
+# Shell crash dumps
+bash.exe.stackdump

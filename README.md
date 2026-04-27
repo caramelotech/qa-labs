@@ -15,7 +15,8 @@ Bem-vindo ao **QA Labs**. Este repositorio reune notas publicadas com Astro + St
 
 ```text
 qa-labs/
-├── src/content/docs/   -> Anotacoes e estudos publicados no site
+├── src/content/docs/
+│   └── fundamentos/    -> Mindset, processos e fundamentos de QA
 ├── examples/           -> Exemplos de codigo, exercicios e projetos praticos
 └── .github/            -> Workflows, templates e guias de contribuicao
 ```
@@ -32,11 +33,9 @@ qa-labs/
 
 ## Como usar
 
-1. Comece pelas anotacoes em `src/content/docs/`
-2. Leia primeiro [A Mentalidade de Quem Testa Aplicacoes](src/content/docs/01-mentalidade-de-tester.md)
-3. Depois avance para [Testes em Diferentes Contextos](src/content/docs/02-testes-em-diferentes-contextos.md)
-4. Resolva os desafios em `examples/exercises.md`
-5. Construa os projetos em `examples/projects.md`
+1. Comece pelas anotacoes em [`src/content/docs/`](http://caramelotech.com.br/qa-labs/)
+2. Resolva os desafios em `examples/exercises.md`
+3. Construa os projetos em `examples/projects.md`
 
 ## Rodando localmente
 

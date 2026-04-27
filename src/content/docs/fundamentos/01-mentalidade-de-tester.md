@@ -78,4 +78,4 @@ A identificacao do que testar pode ocorrer a partir de duas abordagens: **empiri
 
 > Os textos desta pagina foram baseados no Treinamento em Teste de Software do Julio de Lima.
 
-[Voltar ao indice](/qa-labs/indice/)
+[Voltar ao indice](/qa-labs/fundamentos/00-indice/)

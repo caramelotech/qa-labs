@@ -1,15 +1,15 @@
 ---
-title: QA Labs
+title: 🐞 QA Labs
 description: Laboratorio pratico da Caramelo Tech com foco em qualidade de software, tecnicas de teste e automacao.
 template: splash
 hero:
   tagline: Laboratorio pratico da Caramelo Tech com foco em qualidade de software, tecnicas de teste e automacao.
   actions:
     - text: Comecar agora
-      link: /qa-labs/01-mentalidade-de-tester/
+      link: /qa-labs/fundamentos/01-mentalidade-de-tester/
       icon: right-arrow
       variant: primary
-    - text: GitHub
+    - text: Ver no GitHub
       link: https://github.com/caramelotech/qa-labs
       icon: github
       variant: minimal
@@ -17,7 +17,7 @@ sidebar:
   hidden: true
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid, LinkCard } from "@astrojs/starlight/components";
 
 <CardGrid stagger>
   <Card title="Notas" icon="open-book">
@@ -27,9 +27,49 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
     Material pratico para observar tecnicas e abordagens de QA em contexto.
   </Card>
   <Card title="Exercicios" icon="pencil">
-    Desafios para consolidar o aprendizado. Disponiveis em `examples/exercises.md`.
+    Desafios para consolidar o aprendizado. Disponiveis em
+    `examples/exercises.md`.
   </Card>
   <Card title="Projetos" icon="star">
-    Projetos completos para aplicar tudo que foi aprendido. Disponiveis em `examples/projects.md`.
+    Projetos completos para aplicar tudo que foi aprendido. Disponiveis em
+    `examples/projects.md`.
   </Card>
+</CardGrid>
+
+### 🧪 Caramelo Labs
+
+Aqui, você pode encontrar uma variedade de recursos para ajudá-lo em sua jornada tecnológica.
+Confira nossos labs - ótimas opções para ajudá-lo a melhorar suas habilidades.
+
+<CardGrid>
+  <LinkCard
+    title="Data Labs"
+    href="https://caramelotech.com.br/data-labs/"
+    description="Ciência de dados, análise e engenharia de dados"
+  />
+  <LinkCard
+    title="Ruby Labs"
+    href="https://caramelotech.com.br/ruby-labs/"
+    description="Desenvolvimento com Ruby e Rails"
+  />
+  <LinkCard
+    title="Clojure Labs"
+    href="https://caramelotech.com.br/clojure-labs/"
+    description="Programação funcional com Clojure"
+  />
+  <LinkCard
+    title="Web Dev Labs"
+    href="https://caramelotech.com.br/web-dev-labs/"
+    description="HTML, CSS, JavaScript e desenvolvimento web"
+  />
+  <LinkCard
+    title="Java Labs"
+    href="https://caramelotech.com.br/java-labs/"
+    description="Desenvolvimento com Java e Spring"
+  />
+  <LinkCard
+    title="AI Labs"
+    href="https://caramelotech.com.br/ai-labs/"
+    description="Inteligência artificial e prompt engineering"
+  />
 </CardGrid>

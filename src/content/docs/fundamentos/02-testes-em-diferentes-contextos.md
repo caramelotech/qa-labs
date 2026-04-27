@@ -59,4 +59,4 @@ Nos dois modelos, QA contribui para a qualidade, mas a forma de atuar muda basta
 
 > Os textos desta pagina foram baseados no Treinamento em Teste de Software do Julio de Lima.
 
-[Voltar ao indice](/qa-labs/indice/)
+[Voltar ao indice](/qa-labs/fundamentos/00-indice/)
