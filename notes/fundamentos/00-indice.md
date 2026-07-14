@@ -1,11 +1,4 @@
----
-title: "Indice das Anotacoes"
-description: "Veja a trilha de fundamentos, tecnicas de teste e automacao do QA Labs."
-lastUpdated: 2026-04-13
-sidebar:
-  order: 1
-tags: ["qa", "trilha", "testes", "qualidade"]
----
+# Indice das Anotacoes
 
 Bem-vindo a secao de anotacoes do QA Labs. Os topicos estao organizados sequencialmente para apoiar uma progressao clara de estudo.
 
@@ -42,4 +35,4 @@ Tecnicas de Teste (03-05)
 Automacao (06-08)
 ```
 
-[Voltar para a pagina inicial](/qa-labs/)
+[Voltar para a pagina inicial](/labs/qa/)

@@ -1,11 +1,4 @@
----
-title: "A Mentalidade de Quem Testa Aplicacoes"
-description: "Entenda o mindset de QA, a importancia da comunicacao e como levantar riscos sob a perspectiva do usuario."
-lastUpdated: 2026-04-13
-sidebar:
-  order: 2
-tags: ["qa", "mindset", "riscos", "comunicacao"]
----
+# A Mentalidade de Quem Testa Aplicacoes
 
 ## Conceitos Basicos
 
@@ -78,4 +71,4 @@ A identificacao do que testar pode ocorrer a partir de duas abordagens: **empiri
 
 > Os textos desta pagina foram baseados no Treinamento em Teste de Software do Julio de Lima.
 
-[Voltar ao indice](/qa-labs/fundamentos/00-indice/)
+[Voltar ao indice](/labs/qa/fundamentos/00-indice/)

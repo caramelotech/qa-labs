@@ -1,17 +1,3 @@
-# Dependencies
-node_modules/
-
-# Build output
-dist/
-
-# Astro
-.astro/
-
-# Environment
-.env
-.env.*
-!.env.example
-
 # OS
 .DS_Store
 Thumbs.db
@@ -22,8 +8,6 @@ Thumbs.db
 *.swp
 *.swo
 
-# Claude Code
+# Claude & AI
 .claude/
-
-# Shell crash dumps
 bash.exe.stackdump

@@ -1,11 +1,4 @@
----
-title: "Mapa Estudo"
-description: "Este guia organiza os principais conceitos e práticas modernas de qualidade de software, alinhado com o cenário atual de desenvolvimento (CI/CD, microsserviços, automação e observabilidade)."
-lastUpdated: 2026-04-15
-sidebar:
-  order: 1
-tags: ["qa", "roadmap"]
----
+# Mapa Estudo
 
 Este guia organiza os principais conceitos e práticas modernas de qualidade de software, alinhado com o cenário atual de desenvolvimento (CI/CD, microsserviços, automação e observabilidade).
 

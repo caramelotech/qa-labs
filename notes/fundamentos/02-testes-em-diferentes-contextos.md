@@ -1,11 +1,4 @@
----
-title: "Testes em Diferentes Contextos"
-description: "Compare o papel de QA nos modelos tradicional e agil para entender como qualidade muda ao longo do ciclo de desenvolvimento."
-lastUpdated: 2026-04-13
-sidebar:
-  order: 3
-tags: ["qa", "agil", "tradicional", "processos"]
----
+# Testes em Diferentes Contextos
 
 ## Ciclos de vida de desenvolvimento no contexto agil e tradicional
 
@@ -59,4 +52,4 @@ Nos dois modelos, QA contribui para a qualidade, mas a forma de atuar muda basta
 
 > Os textos desta pagina foram baseados no Treinamento em Teste de Software do Julio de Lima.
 
-[Voltar ao indice](/qa-labs/fundamentos/00-indice/)
+[Voltar ao indice](/labs/qa/fundamentos/00-indice/)

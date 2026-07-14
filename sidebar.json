@@ -1,0 +1,7 @@
+{
+  "sections": [
+    { "label": "Visão geral", "slug": "." },
+    { "label": "Fundamentos", "directory": "fundamentos" },
+    { "label": "Mapa de Estudo", "slug": "mapa-de-estudo" }
+  ]
+}
