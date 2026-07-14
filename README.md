@@ -1,87 +1,54 @@
 # QA Labs
 
-> Laboratorio pratico da Caramelo Tech com foco em qualidade de software, tecnicas de teste e automacao.
+Base de conhecimento sobre **qualidade de software** do Caramelo Tech - testes, mentalidade de tester e práticas de QA.
 
-Bem-vindo ao **QA Labs**. Este repositorio reune notas publicadas com Astro + Starlight, exercicios e projetos para apoiar o aprendizado pratico em qualidade de software.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](.github/CONTRIBUTING.md)
 
-## O que voce vai encontrar
+As notas deste repositório são publicadas no site do [Caramelo Labs](https://caramelotech.com.br/labs/qa/).
 
-- Anotacoes sobre mindset, processos e tecnicas de QA
-- Exemplos praticos de abordagens de teste
-- Exercicios para fixar os conceitos
-- Mini projetos para aplicar o aprendizado
+## Conteúdo
 
-## Estrutura do repositorio
+| Tópico | Descrição |
+| ------ | --------- |
+| Fundamentos | Mentalidade de tester e testes em diferentes contextos |
+| Mapa de Estudo | Trilha de estudos para QA |
 
-```text
+## Estrutura do repositório
+
+```
 qa-labs/
-├── src/content/docs/
-│   └── fundamentos/    -> Mindset, processos e fundamentos de QA
-├── examples/           -> Exemplos de codigo, exercicios e projetos praticos
-└── .github/            -> Workflows, templates e guias de contribuicao
+├── notes/           → Anotações em Markdown puro (publicadas no site do Caramelo Labs)
+├── sidebar.json     → Seções da barra lateral no site
+├── examples/        → Exemplos, exercícios e projetos práticos
+└── LICENSE
 ```
 
-### Navegacao rapida
+Este repositório contém **apenas conteúdo** - não há build, dependências ou configuração de site. A estrutura web (Astro + Starlight) vive no repositório hub [labs](https://github.com/caramelotech/labs), que busca as notas daqui a cada atualização e publica o site.
 
-| Secao      | Descricao                    | Link                                               |
-| ---------- | ---------------------------- | -------------------------------------------------- |
-| Notas      | Topicos teoricos organizados | [src/content/docs/](src/content/docs/)             |
-| Exemplos   | Exemplos praticos de QA      | [examples/README.md](examples/README.md)           |
-| Exercicios | Exercicios para praticar     | [examples/exercises.md](examples/exercises.md)     |
-| Projetos   | Projetos para construir      | [examples/projects.md](examples/projects.md)       |
-| Contribuir | Como contribuir              | [.github/CONTRIBUTING.md](.github/CONTRIBUTING.md) |
+## Escrevendo notas
+
+As notas em `notes/` são Markdown puro, sem frontmatter:
+
+- A primeira linha da nota deve ser o título: `# Título da Nota`
+- Use prefixo numérico no nome do arquivo para controlar a ordem na barra lateral: `01-introducao.md`, `02-conceitos.md`
+- Agrupe por tema em subpastas
+- Imagens ficam junto das notas (ex: `notes/secao/assets/img.png`) e são referenciadas com caminho relativo: `![descrição](./assets/img.png)`
+- Links para outras notas do site usam o caminho completo: `/labs/qa/<secao>/<nota>/`
+
+Ao criar uma nova subpasta de tema, adicione a seção correspondente em `sidebar.json`.
 
 ## Como usar
 
-1. Comece pelas anotacoes em [`src/content/docs/`](http://caramelotech.com.br/qa-labs/)
-2. Resolva os desafios em `examples/exercises.md`
-3. Construa os projetos em `examples/projects.md`
+1. Comece pelas anotações em `notes/` (ou pelo [site](https://caramelotech.com.br/labs/qa/))
+2. Explore os exemplos em `examples/`
+3. Resolva os exercícios em `examples/exercises.md`
+4. Construa os projetos em `examples/projects.md`
 
-## Rodando localmente
+## Contribuição
 
-```bash
-npm install
-npm run dev
-```
+Contribuições são bem-vindas! Veja o [Guia de Contribuição](.github/CONTRIBUTING.md) para detalhes.
 
-O servidor local fica em `http://localhost:4321`.
-
-Outros comandos uteis:
-
-```bash
-npm run build
-npm run preview
-```
-
-Versao publicada:
-
-`https://caramelotech.github.io/qa-labs`
-
-## Adicionando notas
-
-Novas anotacoes devem ser criadas em `src/content/docs/`. Use nomes claros e prefixos numericos quando fizer parte da trilha.
-
-Exemplo de frontmatter padrao Starlight:
-
-```md
----
-title: "Titulo da nota"
-description: "Resumo curto explicando o foco da pagina."
-lastUpdated: 2026-01-01
-sidebar:
-  order: 4
-tags: ["qa", "tema", "iniciante"]
----
-```
-
-## Sobre a Caramelo Tech
-
-A Caramelo Tech e uma iniciativa focada em aprendizado pratico de tecnologia. Aqui voce nao apenas le: voce constroi.
-
-## Contribuicao
-
-Contribuicoes sao bem-vindas. Veja o [Guia de Contribuicao](.github/CONTRIBUTING.md) para mais detalhes.
-
-## Licenca
+## Licença
 
 MIT

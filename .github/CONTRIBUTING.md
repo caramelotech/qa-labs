@@ -1,110 +1,79 @@
-# Guia de Contribuicao
+# Guia de Contribuição
 
-Obrigado por querer contribuir com o QA Labs.
+Obrigado por querer contribuir com o QA Labs!
 
-## O que pode ser contribuido
+## O que pode ser contribuído
 
-- Melhorias e correcoes nas anotacoes em `src/content/docs/`
-- Novos exemplos praticos em `examples/`
-- Exercicios adicionais em `examples/exercises.md`
-- Projetos praticos em `examples/projects.md`
-- Melhorias no site Astro + Starlight
+- Melhorias e correções nas anotações (`notes/`)
+- Novos exemplos práticos em `examples/`
+- Exercícios adicionais em `examples/exercises.md`
+- Projetos práticos em `examples/projects.md`
+
+Melhorias no **site** (visual, navegação, deploy) são feitas no repositório hub [labs](https://github.com/caramelotech/labs).
 
 ## Processo
 
-1. Crie uma branch a partir de `main` seguindo o padrao:
+1. Crie uma branch a partir de `main` seguindo o padrão:
 
-   ```text
+   ```
    feature/descricao-curta
    fix/descricao-curta
    docs/descricao-curta
    ```
 
-2. Faca commits atomicos com mensagens no padrao de Conventional Commits:
+2. Faça commits atômicos com mensagens no padrão de Conventional Commits:
 
-   ```text
-   feat: adicionar anotacoes sobre testes de api
-   fix: corrigir descricao de teste exploratorio
-   docs: melhorar exercicio de levantamento de riscos
+   ```
+   feat: adicionar anotações sobre tipos de teste
+   fix: corrigir exemplo de código
+   docs: melhorar introdução
    ```
 
-3. Abra um Pull Request usando o template disponivel.
+   Tipos válidos: `feat`, `fix`, `docs`, `style`, `refactor`, `chore`
 
-4. Apos aprovacao, o merge sera feito por um mantenedor.
+3. Abra um Pull Request usando o template disponível e aguarde revisão.
 
-## Rodando o site localmente
+4. Após aprovação, o merge será feito por um mantenedor. As notas são publicadas automaticamente no [site do Caramelo Labs](https://caramelotech.com.br/labs/qa/) após o merge.
 
-```bash
-npm install
-npm run dev
-```
+## Padrões de conteúdo
 
-O site fica disponivel em `http://localhost:4321`.
+### Anotações (`notes/`)
 
-Para validar antes de abrir o PR:
+As notas são **Markdown puro, sem frontmatter**:
 
-```bash
-npm run build
-npm run preview
-```
-
-## Padroes de conteudo
-
-### Anotacoes em `src/content/docs/`
-
-- Escreva em portugues
-- Use titulos hierarquicos (`##`, `###`)
+- Escreva em português
+- Comece o arquivo com o título: `# Título da Nota` (primeira linha)
+- Use títulos hierárquicos (`##`, `###`) para as seções
 - Prefira exemplos curtos e diretos
-- Inclua o "por que", nao apenas o "como"
-- Nomeie os arquivos com prefixo numerico sequencial
-- Use frontmatter Starlight completo
+- Inclua o "por quê", não apenas o "como"
+- Nomeie os arquivos com prefixo numérico sequencial dentro da pasta: `02-nome-do-topico.md`
+- Imagens ficam junto das notas (ex: `notes/secao/assets/img.png`) e são referenciadas com caminho relativo: `![descrição](./assets/img.png)`
+- Ao criar uma nova subpasta de tema, adicione a seção em `sidebar.json`
 
-Frontmatter recomendado:
-
-```yaml
----
-title: "Titulo da nota"
-description: "Resumo curto explicando o foco da pagina."
-lastUpdated: 2026-01-01
-sidebar:
-  order: 4
-tags: ["qa", "tema", "iniciante"]
----
-```
-
-**`sidebar.order` é sequencial por diretório**, não global. A ordem entre seções é controlada pelo array `sidebar` em `astro.config.mjs`. Dentro de cada pasta, numere os arquivos a partir de 1.
-
-Para adicionar uma nova seção superior (ex: `nova-categoria/`):
-
-1. Crie o diretório em `src/content/docs/nova-categoria/`
-2. Adicione um arquivo `index.md` como página de entrada
-3. Adicione uma entrada `autogenerate` em `astro.config.mjs`:
-   ```javascript
-   {
-     label: "Título da Seção",
-     autogenerate: { directory: "nova-categoria" },
-   }
-   ```
-
-### Exemplos em `examples/`
-
-- Um conceito por pasta ou arquivo quando fizer sentido
-- Inclua um contexto explicando o que o exemplo demonstra
-- Use situacoes reais ou proximas do cotidiano de QA
-
-### Exercicios em `examples/exercises.md`
+### Exercícios (`examples/exercises.md`)
 
 - Descreva claramente o objetivo
-- Indique o nivel de dificuldade quando necessario
-- Inclua criterios de sucesso em formato de checklist
+- Indique o nível de dificuldade (iniciante / intermediário / avançado)
+- Inclua critérios de sucesso em formato de checklist
 
-### Projetos em `examples/projects.md`
+### Projetos (`examples/projects.md`)
 
 - Descreva o objetivo e o contexto
 - Liste os requisitos em formato de checklist
-- Inclua ao menos um exemplo de entregavel esperado
-- Adicione dicas para quem esta comecando
+- Inclua ao menos um exemplo de entregável esperado
 
-## Duvidas
+## Visualizando as notas no site
+
+Não é necessário rodar nada para contribuir - as notas são Markdown puro e podem ser revisadas direto no GitHub. Se quiser ver como ficam no site, clone o repositório hub ao lado deste e rode lá:
+
+```bash
+git clone https://github.com/caramelotech/labs
+cd labs
+npm install
+npm run fetch:local   # usa o clone local deste repositório
+npm run dev           # localhost:4321
+```
+
+## Dúvidas?
 
 Abra uma issue com a tag `question`.

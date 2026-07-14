@@ -1,111 +1,62 @@
-# AGENTS.md - Guia para Agentes de IA
+# AGENTS.md
 
-Bem-vindo ao QA Labs! Este arquivo orienta agentes de IA sobre as convenções, estrutura e melhores práticas do projeto.
+Orientações especializadas para agentes de IA trabalhando com este repositório de conteúdo.
 
-## Sobre o Projeto
+## Contexto do Projeto
 
-**QA Labs** é um laboratório prático focado em qualidade de software, técnicas de teste e automação, publicado com Astro + Starlight e direcionado a aprendizado progressivo de QA.
+Este é o repositório de **conteúdo** do QA Labs (Caramelo Tech):
 
-Veja [CLAUDE.md](CLAUDE.md) para detalhes técnicos completos sobre arquitetura, deployment e convenções de conteúdo.
+- **Conteúdo:** 100% em `notes/`, Markdown puro em português brasileiro, sem frontmatter
+- **Publicação:** o repositório hub [labs](https://github.com/caramelotech/labs) busca as notas daqui e publica em `https://caramelotech.com.br/labs/qa/`
+- **Sem build:** não há dependências, testes ou comandos - apenas Markdown
 
-## Guia Rápido para Agentes
+Veja [CLAUDE.md](CLAUDE.md) para detalhes completos.
 
-### Estrutura de Arquivos
+## Tarefas Comuns
 
-```
-src/content/docs/
-  └─ fundamentos/
-     ├─ 00-indice.md         (Página de entrada da seção)
-     ├─ 01-*.md, 02-*.md     (Notas ordenadas sequencialmente)
-     └─ ...
-  ├─ mapa-de-estudo.md       (Guia de navegação)
-  └─ 404.md
+### Adicionar uma nova nota
 
-examples/
-  ├─ exercises.md            (Enunciados de exercícios práticos)
-  ├─ projects.md             (Projetos integradores)
-  └─ README.md
-```
+1. **Escolha o local:** `fundamentos/` ou uma nova subpasta de tema
+2. **Nomeie com prefixo numérico** para controlar a ordem na barra lateral
+3. **Primeira linha = título:** comece o arquivo com `# Título da Nota` - o site usa esse H1 como título da página
+4. **Sem frontmatter:** escreva direto o Markdown
 
-### Comandos Essenciais
+Exemplo de nota nova (`notes/fundamentos/03-tipos-de-teste.md`):
 
-```bash
-npm run dev      # Servidor local em http://localhost:4321/qa-labs/
-npm run build    # Build de produção
-npm run preview  # Preview do build
+```markdown
+# Tipos de Teste
+
+## Introdução
+
+Conteúdo aqui...
 ```
 
-### Convenções de Conteúdo (⚠️ Obrigatório)
+### Criar nova seção de tema
 
-Todos os arquivos Markdown em `src/content/docs/` **devem** ter frontmatter com essa estrutura:
-
-```yaml
----
-title: "Título da página (sem h1 repetido)"
-description: "Resumo curto explicando o foco (20-60 caracteres)."
-lastUpdated: 2026-04-27
-sidebar:
-  order: 1 # Sequencial dentro do diretório (não global)
-tags: ["qa", "tema-específico", "nível"] # Ex: iniciante, intermediário
----
-## Primeira Seção
-
-Conteúdo...
-```
-
-**Regras críticas:**
-
-- ❌ Não repita o `title` como `# h1` - Starlight renderiza automaticamente
-- ✅ Use `##` e `###` para seções internas
-- ✅ `sidebar.order` é **sequencial por diretório**, não global (ex: dois arquivos diferentes podem ter `order: 1`)
-- ✅ A ordem entre seções é controlada pelo array `sidebar` em `astro.config.mjs`
-
-### Paths e Links Internos
-
-- ⚠️ **Todos os links internos devem incluir o prefixo `/qa-labs`** (base path obrigatório para deployment)
-- Exemplo: `[Mentalidade de Tester](/qa-labs/01-mentalidade-de-tester/)`
-
-### Adicionar Nova Seção Superior
-
-Se quiser criar uma nova seção (ex: `automacao/`):
-
-1. Crie o diretório: `src/content/docs/automacao/`
-2. Adicione um `index.md` como página de entrada
-3. Atualize `astro.config.mjs`:
-   ```javascript
-   {
-     label: "Automação",
-     autogenerate: { directory: "automacao" }
-   }
+1. Crie a subpasta em `notes/nova-secao/` com ao menos uma nota
+2. Adicione a seção em `sidebar.json`:
+   ```json
+   { "label": "Título da Seção", "directory": "nova-secao" }
    ```
-4. Numere os arquivos dentro da pasta: `01-*.md`, `02-*.md`, etc.
 
-## Linguagem e Estilo
+## Regras de Conteúdo
 
-- **Idioma:** Português (pt-BR)
-- **Tom:** Educacional, progressivo, acessível
-- **Público:** Pessoas aprendendo QA (iniciante → avançado)
-- **Estrutura:** Conceitos → Contexto → Prática (exemplos e exercícios)
+- Use **hífens (-)**, não travessões (—)
+- NÃO use `---` para separar seções (apenas para notas/atribuições no final do arquivo)
+- Apenas um `# H1` por arquivo, na primeira linha
+- Imagens ficam junto das notas e são referenciadas com caminho relativo em sintaxe Markdown: `![descrição](./assets/img.png)` - nunca `<img>` HTML nem caminho absoluto
+- Links para outras notas do site: caminho completo `/labs/qa/<secao>/<nota>/`
 
-## Quando Intervir (e Quando Não)
+## Publicação
 
-### ✅ Agentes devem:
+- Push em `main` alterando `notes/` ou `sidebar.json` dispara o workflow `notify-hub.yml`, que aciona o rebuild do site no hub
+- O workflow requer o secret `HUB_DISPATCH_TOKEN` configurado no repositório
+- Para validar como a nota fica no site, rode no clone do hub: `npm run fetch:local && npm run build`
 
-- Criar/editar notas em `src/content/docs/` seguindo as convenções acima
-- Adicionar exemplos práticos em `examples/`
-- Sugerir e implementar novos artigos/seções quando alinhado com o roadmap de QA
-- Validar links internos (incluem `/qa-labs`?)
-- Verificar frontmatter (todos os campos obrigatórios?)
+## Git Conventions
 
-### ❌ Agentes **não devem**:
+- **NUNCA** fazer `git commit` ou `git push` automaticamente
+- Apenas executar comandos git quando explicitamente solicitado pelo usuário
+- Comunicar claramente o que será commitado antes de executar
 
-- Fazer `git commit` ou `git push` automaticamente (apenas quando explicitamente solicitado)
-- Modificar `astro.config.mjs` ou `package.json` sem aprovação
-- Alterar `base` path ou URLs de deployment
-- Criar conteúdo fora do escopo QA/testes
-
-## Recursos Úteis
-
-- [Documentação Astro](https://docs.astro.build/)
-- [Documentação Starlight](https://starlight.astro.build/)
-- [CLAUDE.md](CLAUDE.md) - Referência técnica completa
+Para informações adicionais, ver [CLAUDE.md](CLAUDE.md).
