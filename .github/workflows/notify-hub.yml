@@ -1,0 +1,27 @@
+name: Notify hub
+
+# Avisa o repositório hub (labs) que as notas mudaram,
+# disparando o rebuild e deploy do site.
+#
+# Requer o secret HUB_DISPATCH_TOKEN: fine-grained PAT com permissão
+# "Contents: Read and write" no repositório caramelotech/labs.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "notes/**"
+      - "sidebar.json"
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger labs rebuild
+        run: |
+          gh api repos/caramelotech/labs/dispatches \
+            -f event_type=content-update \
+            -f 'client_payload[repository]=${{ github.repository }}'
+        env:
+          GH_TOKEN: ${{ secrets.HUB_DISPATCH_TOKEN }}
