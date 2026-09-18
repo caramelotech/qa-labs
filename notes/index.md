@@ -4,7 +4,8 @@ Base de conhecimento sobre **qualidade de software** do Caramelo Tech - testes, 
 
 ## O que você vai encontrar
 
-- **Fundamentos** - a mentalidade de quem testa aplicações e testes em diferentes contextos
+- **Fundamentos** - a mentalidade de quem testa aplicações, testes em diferentes contextos e o vocabulário essencial de QA
+- **Automação** - automação de testes na prática, com foco em ferramentas como o Playwright
 - **Mapa de Estudo** - trilha de estudos para QA
 
 Navegue pelas seções na barra lateral.

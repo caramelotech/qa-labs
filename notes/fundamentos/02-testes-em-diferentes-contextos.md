@@ -48,8 +48,3 @@ Nos dois modelos, QA contribui para a qualidade, mas a forma de atuar muda basta
 - No modelo tradicional, a atuacao tende a ser mais tardia e segmentada
 - No modelo agil, QA participa mais cedo e distribui a responsabilidade de qualidade com o time
 
----
-
-> Os textos desta pagina foram baseados no Treinamento em Teste de Software do Julio de Lima.
-
-[Voltar ao indice](/labs/qa/fundamentos/00-indice/)

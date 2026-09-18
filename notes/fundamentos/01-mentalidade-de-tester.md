@@ -66,9 +66,3 @@ A identificacao do que testar pode ocorrer a partir de duas abordagens: **empiri
 
 - **Empirica**: quem testa escolhe o que testar baseando-se em sua experiencia.
 - **Sistematica**: quem testa baseia-se em tecnicas de teste em que, dada uma regra, identifica-se o que deve ser testado.
-
----
-
-> Os textos desta pagina foram baseados no Treinamento em Teste de Software do Julio de Lima.
-
-[Voltar ao indice](/labs/qa/fundamentos/00-indice/)
