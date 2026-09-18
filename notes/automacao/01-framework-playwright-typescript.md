@@ -89,7 +89,7 @@ O Page Object Model (POM) é um padrão onde cada página vira uma classe. A cla
 
 ```ts
 // pages/LoginPage.ts
-import { Page, Locator } from '@playwright/test';
+import { Page, Locator } from "@playwright/test";
 
 export class LoginPage {
   readonly page: Page;
@@ -99,9 +99,9 @@ export class LoginPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.email = page.getByLabel('E-mail');
-    this.senha = page.getByLabel('Senha');
-    this.entrar = page.getByRole('button', { name: 'Entrar' });
+    this.email = page.getByLabel("E-mail");
+    this.senha = page.getByLabel("Senha");
+    this.entrar = page.getByRole("button", { name: "Entrar" });
   }
 
   async fazerLogin(email: string, senha: string) {
@@ -116,7 +116,7 @@ O teste fica limpo:
 
 ```ts
 const login = new LoginPage(page);
-await login.fazerLogin('daniele@email.com', 'senha123');
+await login.fazerLogin("daniele@email.com", "senha123");
 ```
 
 Um comentário honesto: no mundo Playwright o POM pesado é menos comum do que era no Selenium. O Playwright já resolve espera e estabilidade sozinho, e fixtures cobrem boa parte da reutilização. Vale usar POM onde ele paga o custo (telas grandes, reusadas em muitos testes) e não transformar toda tela de duas linhas numa classe. O `mapa-de-estudo` do lab resume isso como "Page Object Pattern com moderação".
@@ -141,14 +141,14 @@ CSS e XPath funcionam (`page.locator('.btn-primary')`), mas prendem o teste à e
 
 ```ts
 // fixtures/auth.fixture.ts
-import { test as base } from '@playwright/test';
-import { LoginPage } from '../pages/LoginPage';
+import { test as base } from "@playwright/test";
+import { LoginPage } from "../pages/LoginPage";
 
 export const test = base.extend<{ paginaLogada: LoginPage }>({
   paginaLogada: async ({ page }, use) => {
     const login = new LoginPage(page);
-    await page.goto('/login');
-    await login.fazerLogin('daniele@email.com', 'senha123');
+    await page.goto("/login");
+    await login.fazerLogin("daniele@email.com", "senha123");
     await use(login); // entrega pro teste
     // depois do teste, o que vier aqui é o teardown
   },
@@ -158,8 +158,8 @@ export const test = base.extend<{ paginaLogada: LoginPage }>({
 No teste, você só pede a fixture:
 
 ```ts
-test('painel abre após login', async ({ page, paginaLogada }) => {
-  await expect(page.getByRole('heading', { name: 'Painel' })).toBeVisible();
+test("painel abre após login", async ({ page, paginaLogada }) => {
+  await expect(page.getByRole("heading", { name: "Painel" })).toBeVisible();
 });
 ```
 
@@ -170,23 +170,23 @@ Vantagem sobre hook: a fixture só roda quando algum teste realmente pede, e o s
 O arquivo central de configuração. Um exemplo enxuto:
 
 ```ts
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
-  testDir: './tests',
+  testDir: "./tests",
   timeout: 30_000,
   retries: process.env.CI ? 2 : 0,
   use: {
-    baseURL: 'https://example.com',
+    baseURL: "https://example.com",
     headless: true,
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
-    trace: 'retain-on-failure',
+    screenshot: "only-on-failure",
+    video: "retain-on-failure",
+    trace: "retain-on-failure",
   },
   projects: [
-    { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
-    { name: 'firefox', use: { ...devices['Desktop Firefox'] } },
-    { name: 'webkit', use: { ...devices['Desktop Safari'] } },
+    { name: "chromium", use: { ...devices["Desktop Chrome"] } },
+    { name: "firefox", use: { ...devices["Desktop Firefox"] } },
+    { name: "webkit", use: { ...devices["Desktop Safari"] } },
   ],
 });
 ```
@@ -246,4 +246,3 @@ Dois pontos que fazem diferença: subir os artefatos do Playwright como artifact
 - [Fixtures](https://playwright.dev/docs/test-fixtures) - Playwright (documentação oficial), en
 - [Test configuration](https://playwright.dev/docs/test-configuration) - Playwright (documentação oficial), en
 - [Best Practices](https://playwright.dev/docs/best-practices) - Playwright (documentação oficial), en
-
