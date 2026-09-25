@@ -9,10 +9,12 @@ As notas deste repositório são publicadas no site do [Caramelo Labs](https://c
 
 ## Conteúdo
 
-| Tópico | Descrição |
-| ------ | --------- |
-| Fundamentos | Mentalidade de tester e testes em diferentes contextos |
-| Mapa de Estudo | Trilha de estudos para QA |
+| Tópico              | Descrição                                                                  |
+| ------------------- | -------------------------------------------------------------------------- |
+| Fundamentos         | Mentalidade de tester e testes em diferentes contextos                     |
+| Práticas e Técnicas | TDD, BDD com Gherkin, testes de contrato e técnicas para testar de verdade |
+| Automação           | Automação de testes na prática, com foco em Playwright                     |
+| Mapa de Estudo      | Trilha de estudos para QA                                                  |
 
 ## Estrutura do repositório
 

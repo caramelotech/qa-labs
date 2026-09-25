@@ -5,6 +5,7 @@ Base de conhecimento sobre **qualidade de software** do Caramelo Tech - testes, 
 ## O que você vai encontrar
 
 - **Fundamentos** - a mentalidade de quem testa aplicações, testes em diferentes contextos e o vocabulário essencial de QA
+- **Práticas e Técnicas** - TDD, BDD com Gherkin, testes de contrato e técnicas para testar de verdade
 - **Automação** - automação de testes na prática, com foco em ferramentas como o Playwright
 - **Mapa de Estudo** - trilha de estudos para QA
 

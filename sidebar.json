@@ -1,8 +1,9 @@
 {
   "sections": [
-    { "label": "Visão geral", "slug": "." },
-    { "label": "Fundamentos", "directory": "fundamentos" },
-    { "label": "Automação", "directory": "automacao" },
-    { "label": "Mapa de Estudo", "slug": "mapa-de-estudo" }
+    { "label": "Visão geral",         "slug": "." },
+    { "label": "Fundamentos",         "directory": "fundamentos" },
+    { "label": "Práticas e Técnicas", "directory": "praticas" },
+    { "label": "Automação",           "directory": "automacao" },
+    { "label": "Mapa de Estudo",      "slug": "mapa-de-estudo" }
   ]
 }
