@@ -200,8 +200,66 @@ O que cada coisa faz:
 - `screenshot: 'only-on-failure'` - guarda print só quando o teste falha
 - `video` e `trace: 'retain-on-failure'` - grava vídeo e trace e descarta se o teste passou
 - `projects` - cada navegador (ou aparelho) em que a suíte roda
+- `workers` - quantos processos rodam testes em paralelo
+- `use.viewport` - tamanho da janela do navegador
+- `use.headless` - com ou sem janela
 
 Para rodar em ambientes diferentes (dev, staging, produção), o padrão é ler a URL e credenciais de variáveis de ambiente e trocar por `.env` ou por parâmetro no comando, em vez de ter um config por ambiente.
+
+## Execução paralela
+
+Rodar cem testes um atrás do outro leva tempo demais. O Playwright divide a suíte entre **workers**: processos do sistema operacional separados, cada um com o próprio navegador. Quanto mais workers, mais testes rodam ao mesmo tempo.
+
+Um detalhe que costuma ser mal entendido: por padrão, o paralelismo é **entre arquivos**. Os testes de um mesmo arquivo rodam em sequência, no mesmo worker. Se você tem dois arquivos com 50 testes cada, dois workers pegam um arquivo cada.
+
+Para paralelizar também os testes dentro do arquivo:
+
+```ts
+// playwright.config.ts, vale para a suíte toda
+export default defineConfig({
+  fullyParallel: true,
+});
+```
+
+```ts
+// só para um grupo de testes de um arquivo
+test.describe.configure({ mode: "parallel" });
+```
+
+O contrário também existe. Quando os testes de um grupo dependem um do outro, dá para usar `mode: 'serial'`: se um falha, os seguintes são pulados. Funciona, mas é um sinal de alerta, porque testes dependentes quebram a regra de independência. Prefira consertar os testes a usar serial.
+
+Para controlar quantos workers rodam:
+
+```ts
+export default defineConfig({
+  workers: process.env.CI ? 2 : undefined, // undefined = o Playwright decide pela CPU
+});
+```
+
+```bash
+npx playwright test --workers 4
+npx playwright test --workers 1 # sem paralelismo, bom para depurar
+```
+
+Quando uma máquina só não dá conta, o **sharding** divide a suíte entre várias máquinas do CI. Cada máquina roda uma fatia:
+
+```bash
+npx playwright test --shard=1/3 # primeira de três fatias
+```
+
+```mermaid
+flowchart LR
+  A[Suíte completa] --> B[Shard 1/3]
+  A --> C[Shard 2/3]
+  A --> D[Shard 3/3]
+  B --> E[Relatório final]
+  C --> E
+  D --> E
+```
+
+Com paralelismo, o cuidado principal é com **dados compartilhados**. Se dois testes rodando ao mesmo tempo mexem no mesmo usuário ou no mesmo registro do banco, um atrapalha o outro e aparece aquele teste instável que só falha às vezes. A saída é cada teste criar os próprios dados (um usuário com e-mail único, por exemplo) e não depender de estado deixado por outro. O [isolamento por context](/labs/qa/automacao/03-browser-context-e-page/) cuida do lado do navegador, o lado dos dados é com você.
+
+Detalhes e o modo de travas para recursos compartilhados estão na [documentação de paralelismo](https://playwright.dev/docs/test-parallel).
 
 ## Relatórios e artefatos
 
